@@ -107,7 +107,6 @@ public class AppPilotos {
                 
                 System.out.println("Digite o cpf do piloto que deseja cadastrar na aeronave: ");
                 CPF = sc.next();
-                 Boolean encontrarPiloto = false;
                 for (Piloto piloto : pilotos) {
                     if(piloto != null && CPF .equals(piloto.getCpf())){
                         Aeronave aero = new Aeronave();
@@ -115,30 +114,18 @@ public class AppPilotos {
                         aero.setModelo(sc.next());
                         System.out.println("Digite o número de série da aeronave: ");
                         aero.setNumeroSerie(sc.next());
-                        encontrarPiloto = true;
                         System.out.println("\nAeronave cadastrada com sucesso.");
                         System.out.println(aero);
                         piloto.setAero(aero);
                      
                 } 
-                            
-                if(!encontrarPiloto){
-                    System.out.println("Cpf não encontrado!");
-                        
-                
-                } 
+                             
                     }
                     voltarMenu(sc);
                     continue;
                 }
 
                 
-                
-
-
-                
-            
-        
             else if (opcao != 0) {
                 System.out.println("\nOpção inválida!");
             }
